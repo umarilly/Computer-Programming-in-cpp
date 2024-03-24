@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": ".",
-      "program": "build/Debug/outDebug",
+      "cwd": "d:/Portfolio Building/Computer-Programming-in-cpp/1. Introduction to Computer Programming in C++/2. Basic Cout Pattern Programs",
+      "program": "d:/Portfolio Building/Computer-Programming-in-cpp/1. Introduction to Computer Programming in C++/2. Basic Cout Pattern Programs/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
