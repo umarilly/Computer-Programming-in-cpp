@@ -12,3 +12,5 @@ int main()
 	// _getch();
 	return 0;
 }
+
+// We will discuss "endl" in future topics

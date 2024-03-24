@@ -6,7 +6,7 @@
     C++ program mainly consist of 3 parts
     1. Preprocessor directives
     2. The main() function
-    2. C++ statements
+    3. C++ statements
 */
 
 /*
