@@ -1,40 +1,30 @@
-
 #include <iostream>
 #include <conio.h>
-
 using namespace std;
-
 int main()
 {
-	int abc[5] = {2, 4, 1, 5, 3};
-	int i, j;
+	int arr[7] = {2,8,5,3,9,4,1};
+	int i, j;  
+	int index; // It is used to keep track the index of the smallest element in the unsorted portion
+	int temp; // It is used for swapping
 
-	int index_ch, temp;
+	for (i = 0; i < 6; i++) {
+		
+		index = i;
 
-	for (i = 0; i < 4; i++)
-	{
-		index_ch = i;
-		cout << "index_ch in 1st Loop : " << index_ch << "\n";
-
-		for (j = i + 1; j < 5; j++)
-		{
-
-			if (abc[index_ch] > abc[j])
-			{
-
-				index_ch = j;
-				cout << "index_chin 2nd Loop : " << index_ch << "\n";
+		for (j = i + 1; j < 7; j++) {
+			if (arr[index] > arr[j]) {
+				index = j;
 			}
 		}
-
-		temp = abc[index_ch];
-		abc[index_ch] = abc[i];
-		abc[i] = temp;
+		temp = arr[index];
+		arr[index] = arr[i];
+		arr[i] = temp;
 	}
 
-	cout << "The Sorted array is : ";
-	for (i = 0; i < 5; i++)
-		cout << abc[i] << " ";
+	cout << "\nThe Sorted array is : ";
+	for (i = 0; i < 7; i++)
+		cout << arr[i] << " ";
 
 	_getch();
 	return 0;
