@@ -1,77 +1,72 @@
-
 #include <iostream>
 #include <conio.h>
 
 using namespace std;
 
-void merge(int arr[], int l, int m, int r) {
-    int i, j, k;
-    int n1 = m - l + 1;
-    int n2 = r - m;
+void merge(int array[], int left, int mid, int right) {
+    int leftSize = mid - left + 1;
+    int rightSize = right - mid;
 
-    int L[n1], R[n2];
+    int leftArray[leftSize], rightArray[rightSize];
 
-    for (i = 0; i < n1; i++)
-        L[i] = arr[l + i];
-    for (j = 0; j < n2; j++)
-        R[j] = arr[m + 1 + j];
+    for (int i = 0; i < leftSize; i++) {
+        leftArray[i] = array[left + i];
+    }
 
-    i = 0;
-    j = 0;
-    k = l;
-    while (i < n1 && j < n2) {
-        if (L[i] <= R[j]) {
-            arr[k] = L[i];
+    for (int j = 0; j < rightSize; j++) {
+        rightArray[j] = array[mid + 1 + j];
+    }
+
+    int i = 0;
+    int j = 0;
+    int k = left;
+
+    while (i < leftSize && j < rightSize) {
+        if (leftArray[i] <= rightArray[j]) {
+            array[k] = leftArray[i];
             i++;
         } else {
-            arr[k] = R[j];
+            array[k] = rightArray[j];
             j++;
         }
         k++;
     }
 
-    while (i < n1) {
-        arr[k] = L[i];
+    while (i < leftSize) {
+        array[k] = leftArray[i];
         i++;
         k++;
     }
 
-    while (j < n2) {
-        arr[k] = R[j];
+    while (j < rightSize) {
+        array[k] = rightArray[j];
         j++;
         k++;
     }
 }
 
-void mergeSort(int arr[], int l, int r) {
-    if (l < r) {
-        int m = l + (r - l) / 2;
+void mergeSort(int array[], int left, int right) {
+    if (left < right) {
+        int mid = left + (right - left) / 2;
 
-        mergeSort(arr, l, m);
-        mergeSort(arr, m + 1, r);
+        mergeSort(array, left, mid);
+        mergeSort(array, mid + 1, right);
 
-        merge(arr, l, m, r);
+        merge(array, left, mid, right);
     }
 }
 
 int main() {
-    int arr[] = {12, 11, 13, 5, 6};
-    int arr_size = sizeof(arr) / sizeof(arr[0]);
 
-    cout << "Given array is : " << endl;
-    for (int i = 0; i < arr_size; i++) {
-        cout << arr[i] << " ";
+    int unsorted[] = {2,8,5,3,9,4,1,7};
+    int size = sizeof(unsorted) / sizeof(unsorted[0]);
+
+    mergeSort(unsorted, 0, size - 1);
+
+    cout << "The Sorted Array is : ";
+    for (int i = 0; i < size; i++) {
+        cout << unsorted[i] << " ";
     }
-        
-    cout << endl;
-
-    mergeSort(arr, 0, arr_size - 1);
-
-    cout << "\nSorted array is : " << endl;
-    for (int i = 0; i < arr_size; i++) {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
 
     _getch();
     return 0;
