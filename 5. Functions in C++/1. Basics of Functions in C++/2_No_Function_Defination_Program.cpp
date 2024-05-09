@@ -4,8 +4,8 @@
 
 using namespace std;
 
-/* No function defination, if function defination is above the main(), then there is no need of function defination */
-void abc() {
+/* No function Prototype, if function defination is above the main(), then there is no need of function Prototype */
+void simpleFunction() {
 	cout << "Press 1 for Output : " <<endl ;
 	cout << "Press 2 for input : " << endl;
 	cout << "Press 3 for process : " << endl;
@@ -13,13 +13,13 @@ void abc() {
 
 int main() {
 
-	abc();
+	simpleFunction();
 	
-	int op;
+	int operation;
 	cout << "Enter from list : ";
-	cin >> op;
+	cin >> operation;
 
-	switch (op) {
+	switch (operation) {
         case 1: {
             cout << "Outputting ... " << endl;
             break;
@@ -33,7 +33,7 @@ int main() {
             break;
         }
         default: {
-            cout << "please select from list " << endl;
+            cout << "please select from the list " << endl;
         }
 	}
 
