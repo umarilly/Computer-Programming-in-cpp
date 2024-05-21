@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int max_m (int x , int y ) {
+int findGreatestNumber (int x , int y ) {
 	if (x > y)
 		return x;
 	else
@@ -14,16 +14,16 @@ int max_m (int x , int y ) {
 
 int main() {
 
-	int a, b;
+	int firstNumber, secondNumber;
 	cout << "------------- Greatest of Two Numbers Program ------------- \n";
 	cout << "Enter first number : ";
-	cin >> a;
+	cin >> firstNumber;
 	cout << "Enter second number : ";
-	cin >> b;
+	cin >> secondNumber;
 
-	int c = max_m(a, b);
+	int greatestNumber = findGreatestNumber(firstNumber, secondNumber);
 
-	cout << "The greatest of two numbers is : " << c << endl;
+	cout << "The greatest of two numbers is : " << greatestNumber << endl;
 
 	_getch();
 	return 0;
