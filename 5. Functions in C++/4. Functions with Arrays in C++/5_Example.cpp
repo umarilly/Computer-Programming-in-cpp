@@ -6,28 +6,27 @@
 
 using namespace std;
 
-double average(int arraySize, const int inp_list[]) {
-    double sum = 0.0;
-    for (int i = 0; i < arraySize; i++)
-        sum = sum + inp_list[i];
+void averageOfArrayElements(int arr[], int arraySize ) {
 
-    return sum / arraySize;
+    cout << "The elements for the array are :- \n";
+        for (int i=0; i<arraySize ; i++) {
+        cout << arr[i] << " "; 
+    }
+    int sum = 0; 
+    double average = 0.0;
+    for (int i=0; i<arraySize ; i++) {
+        sum = arr[i] + sum;
+    }
+    average = sum/arraySize;
+    cout << "\nThe average is : " << average << endl;
 }
 
 int main() {
 
     const int arraySize = 5;
-    int base[arraySize] = {3, 7, 2, 4, 5};
-    double avg;
+    int arr[arraySize] = {13, 17, 12, 14, 19};
 
-    avg = average(arraySize, base);
-
-    cout << "The average of the numbers : ";
-    for (int i = 0; i < arraySize; i++)
-    {
-        cout << base[i] << " ";
-    }
-    cout << " is : " << avg << endl;
+    averageOfArrayElements(arr,arraySize);
 
     _getch();
     return 0;
