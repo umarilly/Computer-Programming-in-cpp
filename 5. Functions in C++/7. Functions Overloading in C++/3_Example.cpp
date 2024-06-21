@@ -1,29 +1,31 @@
 
+// Example to understand function overloading - Square of numbers having different datatypes 
+// The functios names are same - but they are accepting different types of parameters
+
 #include<iostream>
 #include<conio.h>
 
 using namespace std;
 
-int square(int x) 
-{
-	cout << "==> Function 1 :- \n";
+int square(int x) {
+	cout << "==> The Function 1 :- \n";
 	return x * x; 
 }
-float square(float x) 
-{
-	cout << "==> Function 2 :- \n";
+
+float square(float x)  {
+	cout << "==> The Function 2 :- \n";
 	return x * x;
 }
 
+int main() {
 
-int main()
-{
-	int a = 7;
-	float b = 7.6;
+	int a = 10;
+	float b = 10.10;
 
-	cout << square (a) << endl;
-	cout << square(b) << endl;
+    cout << endl;
 
+	cout << "The Square of " << a << " is : " << square (a) << endl;
+	cout << "The Square of " << b << " is : " << square (b) << endl;
 
 	_getch();
 	return 0;
