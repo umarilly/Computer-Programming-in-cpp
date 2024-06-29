@@ -1,30 +1,34 @@
 
-// Swapping of two integer variables using third variable - using call by pointer
+// Swapping of two integer variables using a third variable - using call by pointer
 
 #include<iostream>
 #include<conio.h>
 using namespace std;
 
 void swapping(int* x, int *y) {
-	int* temp;
-	*temp = *x;
-	*x = *y;
-	*y = *temp;
+    int z; // Declaring a temporary variable to hold the value during swap
+    z = *x; // Storing the value pointed to by x in temp
+    *x = *y; // Assigning the value pointed to by y to the location pointed to by x
+    *y = z; // Assigning the value stored in temp to the location pointed to by y
 }
+
 int main() {
-	
-    int a = 10, b = 10;  
 
-	cout << "Before Swapping :- " << endl;
-	cout << "a = " << a << endl;
-	cout << "b = " << b << endl;
+    int a = 10, b = 20;      // Initializing two integer variables
 
-	swapping(&a, &b);
+    // Printing the values of 'a' and 'b' before swapping
+    cout << "Before Swapping :- " << endl;
+    cout << "a = " << a << endl; // Outputs: a = 10
+    cout << "b = " << b << endl; // Outputs: b = 20
 
-	cout << "After Swapping :- " << endl;
-	cout << "a = " << a << endl;
-	cout << "b = " << b << endl;
+    // Calling the swapping function and passing the addresses of 'a' and 'b'
+    swapping(&a, &b);
 
-	_getch();
-	return 0;
+    // Printing the values of 'a' and 'b' after swapping
+    cout << "After Swapping :- " << endl;
+    cout << "a = " << a << endl; // Expected output: a = 20
+    cout << "b = " << b << endl; // Expected output: b = 10
+
+    _getch();
+    return 0;
 }
