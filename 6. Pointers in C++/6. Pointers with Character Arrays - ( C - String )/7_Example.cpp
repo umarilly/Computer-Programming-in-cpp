@@ -2,9 +2,14 @@
 #include <conio.h>
 
 using namespace std;
+const int size = 50;
 
 int main() {
-    char str[] = "Pointer Arithmetic Example";  
+
+    char str[size];
+    cout << "Please enter the string : ";
+    cin.getline(str, size); 
+
     char* ptr = str; 
     int vowelCount = 0;  
 
