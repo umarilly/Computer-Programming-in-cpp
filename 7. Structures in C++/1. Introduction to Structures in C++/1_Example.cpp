@@ -1,24 +1,31 @@
-#include <iostream>
+/*
+    Program to demonstrates the use of a structure in C++ to store and display information about a person.
+*/ 
 
-using namespace std;
+#include <iostream>  
+#include <conio.h>   
 
+using namespace std; 
+
+// Define a structure named 'Person' to hold information about a person
 struct Person {
-    string name;   
-    int age;      
-    float height;  
+    string name;   // Member variable to store the person's name
+    int age;       // Member variable to store the person's age
+    float height;  // Member variable to store the person's height in meters
 };
 
 int main() {
+    Person p;  // Declare a variable 'p' of type 'Person'
 
-    Person person1;
+    p.name = "John Doe";  // Assign the name "John Doe" to the 'name' member of 'p'
+    p.age = 30;           // Assign the age 30 to the 'age' member of 'p'
+    p.height = 1.75;      // Assign the height 1.75 meters to the 'height' member of 'p'
 
-    person1.name = "John Doe";
-    person1.age = 30;
-    person1.height = 1.75;
+    // Output the name, age, and height of the person to the console
+    cout << "The Name is : " << p.name << endl;  
+    cout << "The Age is : " << p.age << endl;    
+    cout << "The Height is : " << p.height << " meters" << endl;
 
-    cout << "Name: " << person1.name << endl;
-    cout << "Age: " << person1.age << endl;
-    cout << "Height: " << person1.height << " meters" << endl;
-
-    return 0;
+    _getch();  
+    return 0; 
 }
