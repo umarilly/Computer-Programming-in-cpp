@@ -1,6 +1,6 @@
 
 /*
-    Program to demonstrates the use of a structure in C++ to store and display information about a book.
+    Program to demonstrates the use of a structure in C++ with arrays
 */ 
 
 #include <iostream>
