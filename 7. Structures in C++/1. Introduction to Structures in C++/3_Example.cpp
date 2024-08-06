@@ -19,17 +19,18 @@ int main() {
 
     const int size = 3;  // Define a constant to specify the number of students
     // Initialize an array of 'Student' structures with data for three students
-    Student students[size] = {
-        {"Alice", 74563, 85.5},
-        {"Bob", 74584, 90.0},
-        {"Charlie", 74456, 78.0}
+    Student s[size] = {
+        {"Umar", 74563, 85.5},
+        {"Ali", 74584, 90.0},
+        {"Ahmed", 74456, 78.0}
     };
 
     // Loop through the array of students and print each student's details
     for (int i = 0; i < size; i++) {
-        cout << "The Student Name is : " << students[i].name << endl;          // Output the student's name
-        cout << "The Roll Number is : " << students[i].rollNumber << endl;     // Output the student's roll number
-        cout << "The Marks are : " << students[i].marks << endl;               // Output the student's marks
+        cout << "-----------------------------" << endl;   
+        cout << "The Student Name is : " << s[i].name << endl;          // Output the student's name
+        cout << "The Roll Number is : " << s[i].rollNumber << endl;     // Output the student's roll number
+        cout << "The Marks are : " << s[i].marks << endl;               // Output the student's marks
         cout << "-----------------------------" << endl;                       // Print a separator line
         cout << endl << endl;  // Print extra newline for spacing
     }
