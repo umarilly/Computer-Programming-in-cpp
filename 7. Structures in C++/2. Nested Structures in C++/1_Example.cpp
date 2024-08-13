@@ -1,4 +1,10 @@
+
+/*
+    Program to demonstrates the use of nested structures in C++
+*/
+
 #include <iostream>
+#include <conio.h>
 
 using namespace std;
 
@@ -19,12 +25,13 @@ struct Employee {
 int main() {
 
     // Create an instance of Employee and initialize its members
-    Employee emp = {"Alice Johnson", 12345, {15, 7, 2010}};
+    Employee emp = {"Smith Watson", 12345, {15, 7, 2010}};
 
     // Access and display the members of the nested structure
-    cout << "Employee Name: " << emp.name << endl;
-    cout << "Employee ID: " << emp.id << endl;
-    cout << "Joining Date: " << emp.joinDate.day << "/" << emp.joinDate.month << "/" << emp.joinDate.year << endl;
+    cout << "The Employee Name is : " << emp.name << endl;
+    cout << "The Employee ID is : " << emp.id << endl;
+    cout << "The Joining Date is : " << emp.joinDate.day << "/" << emp.joinDate.month << "/" << emp.joinDate.year << endl;
 
+    _getch();
     return 0;
 }
