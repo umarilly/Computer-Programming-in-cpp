@@ -3,32 +3,34 @@
 #include<string>
 #include<conio.h>
 
+using namespace std;
+
 struct Address {
-    std::string street;
-    std::string city;
-    std::string state;
+    string street;
+    string city;
+    string state;
     int zip;
 };
 
 struct Person {
-    std::string name;
+    string name;
     int age;
     Address address; 
 };
 
 // Example usage
 int main() {
-    Person person;
-    person.name = "John Doe";
-    person.age = 30;
-    person.address.street = "123 Main St";
-    person.address.city = "Anytown";
-    person.address.state = "PA";
-    person.address.zip = 12345;
+    Person p;
+    p.name = "Smith John";
+    p.age = 55;
+    p.address.street = "560 Main Street";
+    p.address.city = "Downtown";
+    p.address.state = "LA";
+    p.address.zip = 44000;
 
-    std::cout << "Name: " << person.name << std::endl;
-    std::cout << "Age: " << person.age << std::endl;
-    std::cout << "Address: " << person.address.street << ", " << person.address.city << ", " << person.address.state << " " << person.address.zip << std::endl;
+    cout << "The Name is : " << p.name << endl;
+    cout << "The Age is : " << p.age << endl;
+    cout << "The complete Address is : " << p.address.street << ", " << p.address.city << ", " << p.address.state << " " << p.address.zip << endl;
 
     _getch();
     return 0;
