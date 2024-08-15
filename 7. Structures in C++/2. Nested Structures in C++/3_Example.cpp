@@ -1,30 +1,34 @@
-#include <iostream>
 
-using namespace std;
+/*
+    Program to demonstrates the use of nested structures in C++
+*/
 
-// Define a structure to represent the Date of Birth
+#include <iostream>  
+#include <conio.h>  
+
+using namespace std; // Use the standard namespace to avoid prefixing with std::
+
 struct DateOfBirth {
     int day;    // Member variable to store the day of birth
     int month;  // Member variable to store the month of birth
     int year;   // Member variable to store the year of birth
 };
 
-// Define a structure to represent a Student
 struct Student {
-    string name;           // Member variable to store the student's name
-    int rollNumber;        // Member variable to store the student's roll number
-    DateOfBirth dob;       // Nested structure to store the student's date of birth
+    string name;       // Member variable to store the student's name
+    int rollNumber;    // Member variable to store the student's roll number
+    DateOfBirth dob;   // Nested structure to store the student's date of birth
 };
 
 int main() {
 
-    // Create an instance of Student and initialize its members
-    Student student = {"Emily Davis", 2104, {5, 11, 2003}};
+    // Initialize a Student structure with name, roll number, and date of birth
+    Student s = {"Emily Davis", 2104, {5, 11, 2003}};
+    
+    cout << "The Student Name : " << s.name << endl;
+    cout << "The Roll Number is : " << s.rollNumber << endl;
+    cout << "The Date of Birth is : " << s.dob.day << "/" << s.dob.month << "/" << s.dob.year << endl;
 
-    // Access and display the members of the nested structure
-    cout << "Student Name: " << student.name << endl;
-    cout << "Roll Number: " << student.rollNumber << endl;
-    cout << "Date of Birth: " << student.dob.day << "/" << student.dob.month << "/" << student.dob.year << endl;
-
-    return 0;
+    _getch(); 
+    return 0;  
 }
