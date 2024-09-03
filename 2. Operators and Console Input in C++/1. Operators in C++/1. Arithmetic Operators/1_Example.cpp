@@ -1,4 +1,11 @@
+
+/*
+    Program in C++ to demonstrate the use of arithmetic operators.
+*/
+
 #include <iostream>
+#include <conio.h>
+
 using namespace std;
 
 int main() {
@@ -30,6 +37,7 @@ int main() {
     cout << "Quotient : " << quotient << endl;
     cout << "Remainder : " << remainder << endl;
 
+    getch();   
     return 0;
 }
 
