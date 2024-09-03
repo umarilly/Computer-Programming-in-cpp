@@ -1,15 +1,21 @@
 
+/*
+	Programm in C++ to print a triangle pattern using cout.
+*/
+
 #include <iostream>
-// #include <conio.h>
+#include <conio.h>
+
 using namespace std;
-int main()
-{
+int main() {
+	
+	// cout statement to print a triangle pattern
 	cout << "     /\\      " << endl;
 	cout << "    /  \\     " << endl;
 	cout << "   /    \\    " << endl;
 	cout << "  /      \\   " << endl;
 	cout << "  --------  ";
-	// _getch();
+	_getch();
 	return 0;
 }
 

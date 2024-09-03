@@ -1,9 +1,18 @@
+
+/*
+	Program in C++ to demonstrate cout statement
+*/
+
 #include<iostream>
+#include<conio.h>
 
 using namespace std;
 
 int main () {
-    cout << "This is a cout statement";
+
+    cout << "This is a cout statement"; // This line uses the cout (console output) object to print the string
+
+	_getch();
     return 0;
 }
 
