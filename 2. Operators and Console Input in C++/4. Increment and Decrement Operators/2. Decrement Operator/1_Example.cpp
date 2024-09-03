@@ -1,4 +1,11 @@
+
+/*
+    Program in C++ to demonstrate the use of decrement operator.
+*/
+
 #include <iostream>
+#include <conio.h>
+
 using namespace std;
 
 int main() {
@@ -20,5 +27,6 @@ int main() {
     b = a--; // Postfix decrement: assigns the current value of a to b, then decrements a
     cout << "After postfix decrement, a is: " << a << ", b is: " << b << endl;
 
+    _getch();
     return 0;
 }

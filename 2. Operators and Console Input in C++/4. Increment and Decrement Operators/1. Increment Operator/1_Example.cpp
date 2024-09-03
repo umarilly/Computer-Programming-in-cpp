@@ -1,4 +1,11 @@
+
+/*
+    Program in C++ to demonstrate the use of increment operator.
+*/
+
 #include <iostream>
+#include <conio.h>
+
 using namespace std;
 
 int main() {
@@ -20,5 +27,6 @@ int main() {
     y = x++; // Postfix increment: assigns the current value of x to y, then increments x
     cout << "After postfix increment, x is: " << x << ", y is: " << y << endl;
 
+    getch();
     return 0;
 }
