@@ -1,4 +1,11 @@
+
+/*
+    Program to demonstrate the use of constants in C++.
+*/
+
 #include <iostream>
+#include <conio.h>
+
 using namespace std;
 
 int main() {
@@ -14,11 +21,10 @@ int main() {
     b = 75; // modifying a non-constant variable
     cout << "Value after modification: " << b << endl;
 
+    _getch();
     return 0;
 }
 
 /*
-    In this example, "a" is declared as a constant variable using the const keyword. Once a value is assigned to "a", it cannot be modified. Attempting to assign a new value to "a" will result in a compilation error.
-
-    On the other hand, the variable "b" is not declared as const, so its value can be modified during the program execution.
+    In this example, "a" is declared as a constant variable using the const keyword. Once a value is assigned to "a", it cannot be modified. Attempting to assign a new value to "a" will result in a compilation error. On the other hand, the variable "b" is not declared as const, so its value can be modified during the program execution.
 */
