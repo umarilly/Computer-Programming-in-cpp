@@ -1,4 +1,11 @@
+
+/*
+    Program in C++ to demonstrate type casting.
+*/
+
 #include <iostream>
+#include <conio.h>
+
 using namespace std;
 
 int main()
@@ -22,5 +29,6 @@ int main()
         reinterpret_cast
     */
 
+    _getch();
     return 0;
 }
