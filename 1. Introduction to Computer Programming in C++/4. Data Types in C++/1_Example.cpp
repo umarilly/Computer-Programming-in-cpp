@@ -1,5 +1,10 @@
 
+/*
+    Program in C++ to demonstrate data types in C++
+*/
+
 #include <iostream>
+#include <conio.h>
 
 using namespace std;
 
@@ -52,5 +57,6 @@ int main() {
     cout << "Size of char: " << sizeof(char) << " bytes" << endl;
     cout << "Size of double: " << sizeof(double) << " bytes" << endl;
 
+    _getch();
     return 0;
 }
