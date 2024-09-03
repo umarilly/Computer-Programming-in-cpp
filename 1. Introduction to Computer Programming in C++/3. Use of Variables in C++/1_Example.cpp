@@ -1,4 +1,8 @@
+
+// Program in C++ to declare and initiazlize a variable of int type and print it on the screen
+
 #include <iostream>
+# include <conio.h>
 
 using namespace std;
 int main() {
@@ -6,6 +10,7 @@ int main() {
     int a = 10;
     cout << "The value of a is : " << a ;
 
+    _getch();
     return 0;
 }
 
