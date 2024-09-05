@@ -7,8 +7,9 @@
 #include <conio.h>
 
 using namespace std;
-int main()
-{
+
+int main() {
+
     int a, b; // variable declaration
 
     for (a = 1, b = 10; a <= 10, b >= 1; a++, b--) {
