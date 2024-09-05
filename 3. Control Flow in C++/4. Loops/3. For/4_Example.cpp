@@ -1,3 +1,6 @@
+/*
+    Program in C++ to find the factorial of a number using a for loop.
+*/
 
 #include<iostream> 
 #include<conio.h>
@@ -6,17 +9,19 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cout << "Enter the number whose factorial you want to find : ";
-    cin >> n;
+    int number;
+    cout << "Enter the number whose factorial you want to find: ";
+    cin >> number;
     
-    int i, f = 1;
+    int factorial = 1; 
 
-    for (i = 2; i <= n; i++) {
-        f = f * i;
+    for (int i = 2; i <= number; i++) {
+        // Multiply the current value of factorial with the current value of i
+        factorial *= i;
     }
 
-    cout << "The factorial of " << n << " is " << f << endl;
+    // Display the factorial of the number
+    cout << "The factorial of " << number << " is " << factorial << endl;
 
     _getch();
     return 0;
