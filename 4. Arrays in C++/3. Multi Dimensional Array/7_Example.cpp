@@ -35,7 +35,7 @@ int main()
 		}
 	}
 
-    cout << "\nThe sum of rows is : " << sum << endl;
+    cout << "\nThe sum of rows is : " << sum << endl; // Displaying the sum of rows
 	
 	_getch();
 	return 0;
