@@ -26,7 +26,7 @@ int main() {
 	return 0;
 }
 
-//Function Defination
+// Function Defination
 int sum(int a, int b) {
     return (a + b);
 }
