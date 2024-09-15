@@ -1,25 +1,24 @@
 
+/*
+	Program in C++ to demonstrate call by value.
+*/
+
 #include<iostream>
 #include<conio.h>
 
 using namespace std;
 
-void sum_avg (double i , double j ,double sum ,double avg) {
-	sum = i + j;
-	avg = sum / 2;
-	cout << "The sum is : " << sum << endl;
-	cout << "The avg is : " << avg << endl;
+// Function to demonstrate call by value
+void foo (int  value) {
+	value = 9;
 }
 
 int main() {
-	
-    int a, b;
-	int sum = 0, avg = 0;
 
-	cout << "Enter two numbers :- \n";
-	cin >> a >> b;
-
-	sum_avg(a, b, sum, avg);
+	int value = 3;
+	foo(value); // value is passed by value
+	// The value of 'value' remains unchanged
+	cout << "The value is : " << value << endl;
 
 	_getch();
 	return 0;
