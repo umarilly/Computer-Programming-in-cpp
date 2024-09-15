@@ -1,4 +1,9 @@
 
+/*
+	Program in C++ to demonstrate the use of call by value.
+*/
+
+
 #include<iostream>
 #include<conio.h>
 
@@ -15,11 +20,15 @@ int sumFunction(int x, int  y) {
 }
 int main() {
     
-	int a = 15, b = 20;
+	// a and b are local to main function
+	int a = 15, b = 20; 
+
 	cout << "\na and b in main are \n" << a << " & " << b << endl;
 
+	// a and b are passed by value
 	int c = sumFunction(a, b);
-	cout << "\n&, The sum is : " << c << endl;
+
+	cout << "\n&, The sum is : " << c << endl; // This line will print display the output
 
 	_getch();
 	return 0;
